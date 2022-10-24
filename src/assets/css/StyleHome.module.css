@@ -1,0 +1,158 @@
+:root {
+  --primary-color: rgb(113, 113, 201);
+  --secondary-color: rgb(164, 164, 233);
+  --netral-color: white;
+  --font-color: #4a4a4a;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.navEdit {
+  color: white !important;
+}
+
+.titleSideBar {
+  text-align: center;
+  color: var(--netral-color);
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  left: -250px;
+  top: 0px;
+  background: #2a1f98;
+  background: linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  background: -webkit-linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  background: -moz-linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+.sidebar .header {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  justify-content: center;
+  background: #2a1f98;
+  padding: 40px 0px;
+  border-bottom: 2px solid rgb(9, 9, 75);
+  user-select: none;
+}
+
+.menuSideBar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  row-gap: 10px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #2a1f98;
+  background: linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  background: -webkit-linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  background: -moz-linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  border: 3px 3px solid black;
+}
+
+label #btn {
+  left: 40px;
+  top: 10px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s ease;
+  position: fixed;
+}
+
+label #cancel {
+  z-index: 111;
+  left: -195px;
+  top: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 4px 9px;
+}
+
+#check:checked ~ label #btn {
+  left: -250px;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 200px;
+  position: fixed;
+  z-index: 9999;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+  box-shadow: 3px 1px 10px black;
+}
+
+.liSide {
+  float: left;
+  margin-right: 2px;
+}
+
+.liSide .aSide {
+  border-radius: 5px;
+  display: block;
+  color: var(--netral-color);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  background-color: var(--primary-color);
+}
+
+.liSide .aSide:hover {
+  background-color: var(--secondary-color);
+}
+
+.boxList {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.52);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.boxListDone {
+  border-radius: 10px;
+  color: white;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.52);
+  background: #2a1f98;
+  background: linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  background: -webkit-linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  background: -moz-linear-gradient(341deg, #2a1f98 0%, #4752da 80%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #4a4a4a;
+  bottom: 0px;
+  position: static;
+}
